@@ -8,7 +8,7 @@ var authorize = require('../middleware/auth.js');
 var timeoutConfig = {
   timeout: 2000
 };
-router.use(authorize)
+router.use(authorize);
 router.get('/forecast/:latitude,:longitude', function(request, response){
   var url = buildForecastURL(request.params.latitude, request.params.longitude);
   axios.get(url, timeoutConfig)
@@ -17,7 +17,7 @@ router.get('/forecast/:latitude,:longitude', function(request, response){
      })
      .catch(function(error){
        response.send(error);
-     };
+     });
 });
 
 module.exports = router;

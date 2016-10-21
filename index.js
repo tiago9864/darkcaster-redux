@@ -7,7 +7,7 @@ var cors = require('cors');
 
 
 var forecasterRouter = require('./routers/forecast.router.js');
-var indexRouter = require('./router/index.router.js');
+var indexRouter = require('./routers/index.router.js');
 
 var port = process.env.PORT || 8080;
 
